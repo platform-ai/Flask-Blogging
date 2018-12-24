@@ -47,7 +47,7 @@ def get_requirements(suffix=''):
     return rv
 
 setup(
-    name='Flask-Blogging',
+    name='GC-Flask-Blogging',
     version=version,
     url='https://github.com/gouthambs/Flask-Blogging',
     license='MIT',
