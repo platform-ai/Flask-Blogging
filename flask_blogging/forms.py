@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired
 
 class BlogEditor(FlaskForm):
     title = StringField("title", validators=[DataRequired()])
+    cover = StringField("cover", validators=[DataRequired()])
     text = TextAreaField("text", validators=[DataRequired()])
     tags = StringField("tags", validators=[DataRequired()])
     draft = BooleanField("draft", default=False)

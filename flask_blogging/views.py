@@ -43,6 +43,7 @@ def _clear_cache(cache):
 
 def _store_form_data(blog_form, storage, user, post, escape_text=True):
     title = blog_form.title.data
+    cover = blog_form.cover.data
     text = escape(blog_form.text.data) if escape_text \
         else blog_form.text.data
     tags = blog_form.tags.data.split(",")
@@ -52,7 +53,7 @@ def _store_form_data(blog_form, storage, user, post, escape_text=True):
     post_date = post.get("post_date", current_datetime)
     last_modified_date = datetime.datetime.utcnow()
     post_id = post.get("post_id")
-    pid = storage.save_post(title, text, user_id, tags, draft=draft,
+    pid = storage.save_post(title, cover, text, user_id, tags, draft=draft,
                             post_date=post_date,
                             last_modified_date=last_modified_date,
                             post_id=post_id)
