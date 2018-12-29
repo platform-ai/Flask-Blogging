@@ -6,7 +6,7 @@ except ImportError:
 
 class Storage(object):
 
-    def save_post(self, title, text, user_id, tags, draft=False,
+    def save_post(self, title, cover, text, user_id, tags, draft=False,
                   post_date=None, last_modified_date=None, meta_data=None,
                   post_id=None):
         """
