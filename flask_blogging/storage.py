@@ -114,4 +114,4 @@ class Storage(object):
 
     @staticmethod
     def normalize_tag(tag):
-        return tag.strip()
+        return tag.upper().strip()
